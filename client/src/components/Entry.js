@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card'
 
 const Entry = ({ title }) => {
 	return (
-		<Card>
+		<Card id="result-entry">
 			<Card.Body>
 				<Card.Title>{ title }</Card.Title>
 				<Card.Subtitle className="mb-2 text-muted">Available</Card.Subtitle>
