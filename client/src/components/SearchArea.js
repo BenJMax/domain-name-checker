@@ -1,4 +1,7 @@
 import { useState } from 'react' 
+
+import axios from 'axios'
+
 import Form from 'react-bootstrap/Form'
 import Results from './Results'
 import Container from 'react-bootstrap/Container/'
@@ -6,10 +9,21 @@ import Row from 'react-bootstrap/Row/'
 import Col from 'react-bootstrap/Col/'
 
 const SearchArea = (props) => {
-	const [ query, setQuery ] = useState('')
+	const [ query, setQuery ] = useState({
+		query	 : '',
+		tlds	 : ['ca', 'com', 'au', 'cn', 'io', 'br', 'rl', 'en', 'ld'], 
+		variants : ['', '-', '_'],
+		settings : [], 
+		filters  : []
+	})
 	
+	useEffect(() => {
+		
+	})
+
 	const trackQuery = (event) => {
-		setQuery(event.target.value)
+		
+		setQuery({...query, query : event.target.value})
 	}
 
 	return (
@@ -29,7 +43,7 @@ const SearchArea = (props) => {
 						<Form.Control
 								className='shadow-none'
 								type='text' 
-								value={ query }
+								value={ query.query }
 								onChange={ e => trackQuery(e) } 
 								placeholder='Full name' />
 					</Form.Group>

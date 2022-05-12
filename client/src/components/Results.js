@@ -1,27 +1,28 @@
 import Stack from 'react-bootstrap/Stack'
 import Entry from './Entry'
+import serveQuery from '../lib/serveQuery'
 
 const Results = ({ query }) => {
 	
-	const items = [ 
-		'one', 'twotwo', 'threethreethree', 'fourfourfourfour', 'five', 'six',
+	const tld = [ 
+		'ca', 'com', 'au', 'cn', 'io', 'br', 'rl', 'en', 'ld'
 	]
-	
-	const itemsToRender = items.filter(item => item.length > query.length)	
 
 	
+	const queryResults = serveQuery(query)
+	console.log(queryResults)
+	
 	if (query === '') {
-		console.log(query)
 		return (
 			<div className="text-center">
 				This is the default
 			</div>
 		)
-	} else {
+	} else if (queryResults){
 		return (
 			<Stack id="found-results" gap={1}> 
-				{ itemsToRender 
-					.map(item => <Entry title={ item } key={ item }/>)
+				{ queryResults 
+					.map(item => <Entry title={ item.name } key={ item.name }/>)
 				}
 			</Stack>
 		)
