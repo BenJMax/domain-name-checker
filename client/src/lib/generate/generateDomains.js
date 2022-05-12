@@ -1,9 +1,3 @@
-const logDomainString = (domainString, start, next) => {
-	console.log('DomainString: ', domainString)
-	console.log('Start: ', start)
-	console.log('Next: ', next)
-	console.log('')
-}
 
 const replaceSpacesWith = (input, replacement) => {
 	return input.replaceAll(' ', replacement)
@@ -37,7 +31,7 @@ const findDomainOccurences = (input, tld, variants) => {
 
 				// if domain has spaces, fill with variants	
 				if (domainString.includes(' ')) {
-					variants.map(v => {
+					variants.forEach(v => {
 						found.push({
 							name : replaceSpacesWith(domainString, v)  
 						})
@@ -60,15 +54,13 @@ const findDomainOccurences = (input, tld, variants) => {
 } 
 
 
-const generateValidDomains = (query) => {
+const generateValidDomains = (queryInfo) => {
 
 	// baseline input
-	const rawInput = replaceSpacesWith(query.query, '').toLowerCase()
-
-	console.log(rawInput)
+	const rawInput = replaceSpacesWith(queryInfo.query, '').toLowerCase()
 
 	// produce array of all tlds that are substrings of the input string
-	const usefulTlds = query.tlds.filter(t => rawInput.includes(t))
+	const usefulTlds = queryInfo.tlds.filter(t => rawInput.includes(t))
 
 	// if the input string doesn't contain any tlds, return null
 	if (!usefulTlds.length) return null; 
@@ -79,7 +71,7 @@ const generateValidDomains = (query) => {
 	*  from the input and tlds
 	*/
 	const results = usefulTlds.reduce((res, tld) => {
-			res.push(...findDomainOccurences(query.query, tld, query.variants))
+			res.push(...findDomainOccurences(queryInfo.query, tld, queryInfo.variants))
 			return res
 		}, [])
 

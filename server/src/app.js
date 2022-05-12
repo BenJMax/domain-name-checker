@@ -3,12 +3,16 @@ const logger = require('./utils/logger')
 const middleware = require('./utils/middleware')
 
 const mongoose = require('mongoose')
+const cors = require('cors')
 const express = require('express')
 
 const app = express() 
 
 const queryRouter = require('./controllers/queryController')
 const tldRouter = require('./controllers/tldController')
+
+
+console.log('connecting to: ', config.DB_URI)
 
 mongoose
 	.connect(config.DB_URI)
@@ -20,12 +24,13 @@ mongoose
 	})
 
 // Start middleware 
+app.use(cors())
 app.use(express.json())
 app.use(middleware.morgan('combined'))
 
 // Start routers 
 app.use('/api/query', queryRouter)
-app.use('/api/tld', tldRouter)
+app.use('/api/tlds', tldRouter)
 
 // Start garbage-collecting middleware 
 // TODO

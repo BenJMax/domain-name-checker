@@ -2,14 +2,11 @@ import Stack from 'react-bootstrap/Stack'
 import Entry from './Entry'
 import serveQuery from '../lib/serveQuery'
 
-const Results = ({ query }) => {
+const Results = ({ query, tlds, settings }) => {
 	
-	const tld = [ 
-		'ca', 'com', 'au', 'cn', 'io', 'br', 'rl', 'en', 'ld'
-	]
+	// find all domain options
+	const queryResults = serveQuery({ query : query, tlds : tlds, variants : settings.variants })
 
-	
-	const queryResults = serveQuery(query)
 	console.log(queryResults)
 	
 	if (query === '') {
@@ -20,9 +17,9 @@ const Results = ({ query }) => {
 		)
 	} else if (queryResults){
 		return (
-			<Stack id="found-results" gap={1}> 
+			<Stack id="found-results" gap={ 1 }> 
 				{ queryResults 
-					.map(item => <Entry title={ item.name } key={ item.name }/>)
+					.map(domain => <Entry domain={ domain.name } key={ domain.name }/>)
 				}
 			</Stack>
 		)
