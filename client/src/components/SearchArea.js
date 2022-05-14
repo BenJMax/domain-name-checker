@@ -50,8 +50,6 @@ const SearchArea = (props) => {
 				<Form id="search-form" className="text-center"> 
 					<img 
 						id="site-logo"
-						src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Dyson_logo.svg"
-						alt='stop annoying me'
 						/>	
 					<Form.Group>
 						<Form.FloatingLabel

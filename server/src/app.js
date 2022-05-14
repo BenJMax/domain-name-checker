@@ -12,6 +12,7 @@ const queryRouter = require('./controllers/queryController')
 const tldRouter = require('./controllers/tldController')
 
 
+
 console.log('connecting to: ', config.DB_URI)
 
 mongoose
@@ -20,8 +21,12 @@ mongoose
 		logger.info('connected to mongoDB')
 	})
 	.catch((e) => {
-		logger.error('encountered an error while connecting to mongoDB ', e.message)
+		logger.error('an r while connecting to mongoDB ', e.message)
 	})
+
+
+
+
 
 // Start middleware 
 app.use(cors())
