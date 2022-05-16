@@ -1,11 +1,15 @@
-import { useState, useEffect } from 'react'
+import * as React from "react";  
 
 import Card from 'react-bootstrap/Card'
 import Spinner from 'react-bootstrap/Spinner'
 import domainService from '../../services/domainService'
 
-const Entry = ({ domain }) => {
-	const [ avail, setAvail ] = useState(0)
+interface Prop {
+	domain: string
+}
+
+export const Entry: React.FC<Prop> = ({ domain }) => {
+	const [ avail, setAvail ] = React.useState(0)
 
 	const queryAvail = () => {
 		domainService
@@ -19,7 +23,7 @@ const Entry = ({ domain }) => {
 	}
 
 
-	useEffect(queryAvail, [])
+	React.useEffect(queryAvail, [])
 
 	if (avail === 0) {
 		return (

@@ -2,45 +2,22 @@
 	Start testing styles 
 */ 
 
-#footer-icon {
-	width: 30px; 
-	height: 30px; 
+#footer-container {
+	position: fixed;
+	border: none;
+	left: 0; 
+	bottom: 0;
+	width: 100%;
 }
 
-#nav {
-	background-color: #2F2F2F;
+#upper-search {
+	height: 20vh;
 }
 
-#footer-text-link:link, #footer-text-link:visited {
-	color: black; 
-	text-decoration: none;
+#search-bar-container {
+	height: 100%;
 }
 
-
-/*
-	Start base styles
-*/ 
-#site-logo {
-	width: 500px; 
-	height: 200px;  
-}
-
-#query-results {
-	max-height: 60vh; 
-}
-
-#ftext {
-	color: white;
-}
-
-footer {
-	background: grey;
-}
-
-
-body {
-	background-image: linear-gradient(45deg, #e66465, #9198e5); 
-}
 
 #search-bar-input, #search-bar-label {
 	color: black;
@@ -72,3 +49,52 @@ body {
 	border-radius: 15px;
 }
 
+
+html, body {
+	height: 100%;
+}
+body {
+	background-image: linear-gradient(45deg, #e66465, #9198e5); 
+}
+
+/* START HEADER STYLES */
+
+#header-root {
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#header-container {
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+
+/*
+	Start base styles
+*/ 
+
+/* START SEARCH AREA STYLES */
+#site-logo {
+	width: 500px; 
+	height: 200px;  
+}
+
+#query-results {
+	max-height: 60vh; 
+}
+
+#ftext {
+	color: white;
+}
+
+
+
+
+footer {
+	background: grey;
+}
