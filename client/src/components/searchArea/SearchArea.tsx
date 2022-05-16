@@ -3,23 +3,17 @@ import tldService from '../../services/tldService';
 import { Results } from '../results'
 import { QueryBar } from '../queryBar';
 
+// types
+import { QueryInfo, TLD, TLDType } from '../../types';
+
 // mantine
 import { Container, TextInput, Loader, Grid, Image } from '@mantine/core'
 
 
-// to be dep 
-import Row from 'react-bootstrap/Row/'
-import Col from 'react-bootstrap/Col/'
-
-
-interface TLD { 
-	domain: string,
-	type: "generic" | "country-restricted" 
-}
 
 export const SearchArea: React.FC = () => {
 	// useRef of tlds
-	const tlds = React.useRef(['ca', 'com', 'au', 'cn', 'io', 'br', 'rl', 'en', 'ld'])
+	const tlds  = React.useRef(['ca', 'com', 'au', 'cn', 'io', 'br', 'rl', 'en', 'ld'])
 
 	// states
 	const [ query, setQuery ] = React.useState('')
