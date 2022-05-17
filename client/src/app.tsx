@@ -11,10 +11,16 @@ import {
 
 export const App = () => {
 	return (
-		<Container fluid>
-			<SimpleHeader />
+		<>
+			<div>
+				<SimpleHeader />
+			</div>
+
 			<SearchArea />
-			<SimpleFooter />
-		</Container>
+
+			<div>
+				<SimpleFooter />
+			</div>
+		</>
     )
 }

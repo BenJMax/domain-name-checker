@@ -8,7 +8,7 @@ export interface TLDType {
 // TLD
 export interface TLD {
     domain: string,
-    type: TLDType
+    type: string 
 }
 
 

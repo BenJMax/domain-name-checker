@@ -8,10 +8,9 @@ export const SimpleFooter: React.FC = () => {
 	return (
 
 		<div id='footer-container'> 
-			<Divider my='sm' variant='dashed'></Divider>
-			<Container size='xl'>
+			<Container className='mt-footer' size='xl'>
+				<Divider variant='dashed'/>
 				<Footer height={60} style={{ backgroundColor : 'transparent', border : 'none'}}>
-					Text
 				</Footer>
 			</Container>
 		</div>

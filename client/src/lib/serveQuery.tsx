@@ -11,7 +11,7 @@ const serveQuery = (query : string, tlds : Array<string>, settings : any) => {
 	}
 
 	// produce all valid domains from query parameters  
-	const domains = generateValidDomains()
+	const domains = generateValidDomains(queryInfo)
 
 	return domains
 	

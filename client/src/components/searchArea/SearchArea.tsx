@@ -48,6 +48,7 @@ export const SearchArea: React.FC = () => {
 
 	return (
 	<>
+	<div>
 		<Container size="xl" id="upper-search">
 			<Container size="md" id='search-bar-container'>
 				<Grid justify='center' align='flex-end' id='search-grid' style={{minHeight: '100%'}}>
@@ -58,9 +59,12 @@ export const SearchArea: React.FC = () => {
 			</Container>
 
 		</Container>
-		<Container size='md' id='results-container' style={{ maxHeight : '65vh', flexGrow: 1, overflowY: 'auto' }}>
-			<Results query={ query } tlds={ tlds.current } settings={ settings } />	
+	</div>
+	<div className='res'> 
+		<Container>
+				<Results query={ query } tlds={ tlds.current } settings={ settings } />	
 		</Container>
+	</div>
 	</>
 	);
 };

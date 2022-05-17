@@ -1,14 +1,19 @@
 /*
 	Start testing styles 
 */ 
-
-#footer-container {
-	position: fixed;
-	border: none;
-	left: 0; 
-	bottom: 0;
+#root {
 	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto auto minmax(0, 1fr) auto; 
 }
+
+.res {
+	max-width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
 
 #upper-search {
 	height: 20vh;
@@ -50,8 +55,12 @@
 }
 
 
+
 html, body {
+	width: 100%;
 	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 body {
 	background-image: linear-gradient(45deg, #e66465, #9198e5); 
@@ -79,18 +88,6 @@ body {
 */ 
 
 /* START SEARCH AREA STYLES */
-#site-logo {
-	width: 500px; 
-	height: 200px;  
-}
-
-#query-results {
-	max-height: 60vh; 
-}
-
-#ftext {
-	color: white;
-}
 
 
 
