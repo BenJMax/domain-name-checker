@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/BenJMax/domain-name-checker/issues"
   },
-  "homepage": "https://github.com/BenJMax/domain-name-checker#readme"
+  "homepage": "https://github.com/BenJMax/domain-name-checker#readme",
+  "dependencies": {
+  }
 }
