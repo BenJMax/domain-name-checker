@@ -63,7 +63,7 @@ const generateValidDomains = (queryInfo) => {
 	const usefulTlds = queryInfo.tlds.filter(t => rawInput.includes(t))
 
 	// if the input string doesn't contain any tlds, return null
-	if (!usefulTlds.length) return null; 
+	if (!usefulTlds.length) return []; 
 
 	/*
 	*  given the array of tlds that we know the input contains at least once,  
