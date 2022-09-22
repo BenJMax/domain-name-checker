@@ -12,7 +12,6 @@ const queryRouter = require('./controllers/queryController')
 const tldRouter = require('./controllers/tldController')
 
 
-
 console.log('connecting to: ', config.DB_URI)
 
 mongoose

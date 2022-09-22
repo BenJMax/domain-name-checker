@@ -19,7 +19,6 @@
 
 ## Roadmap
 
-- Migration to Mantine 
 - NoResults component
     - Instructions
 - Addition of location-based domain registration availability to returned domains
