@@ -33,7 +33,6 @@ export const Entry: React.FC<Prop> = ({ domain }) => {
 					<Card.Subtitle>
 						<Spinner animation="border" role="status"></Spinner>
 					</Card.Subtitle>
-				<Card.Text>Response payload</Card.Text>
 			</Card.Body>
 		</Card>
 		)
@@ -43,7 +42,7 @@ export const Entry: React.FC<Prop> = ({ domain }) => {
 			<Card.Body>
 				<Card.Title>{ domain }</Card.Title>
 				<Card.Subtitle className="mb-2 text-muted">Available</Card.Subtitle>
-				<Card.Text>Response payload</Card.Text>
+				<Card.Text>URL is available for registration</Card.Text>
 			</Card.Body>
 		</Card>
 		)
@@ -53,7 +52,7 @@ export const Entry: React.FC<Prop> = ({ domain }) => {
 			<Card.Body>
 				<Card.Title>{ domain }</Card.Title>
 				<Card.Subtitle className="mb-2 text-muted">Unavailable</Card.Subtitle>
-				<Card.Text>Response payload</Card.Text>
+				<Card.Text>URL is unavailable for registration</Card.Text>
 			</Card.Body>
 		</Card>
 		)

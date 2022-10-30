@@ -9,7 +9,6 @@ interface Props {
 
 export const QueryBar: React.FC<Props> = ({ query, onChange }) => {
 
-    // loading bar for input smoothing 
     if (true) {
         return (
             <>
@@ -21,15 +20,12 @@ export const QueryBar: React.FC<Props> = ({ query, onChange }) => {
                     variant='default'
                     value={ query } 
                     onChange={ (e) => onChange(e) }
-                    rightSection={<Loader variant='dots' size='lg'/>}
                     rightSectionWidth={65}
                     style={{
 
                     }}
                     >
                 </TextInput>
-
-
             </>
         ); 
     }
