@@ -1,6 +1,6 @@
 import * as React from 'react'; 
 import tldService from '../../services/tldService';
-import { Results } from '../results'
+import { Results } from '../Results'
 import { QueryBar } from '../queryBar';
 
 // types

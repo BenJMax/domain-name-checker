@@ -3,7 +3,7 @@ import { Stack } from '@mantine/core'
 
 import { QueryInfo } from '../../types'
 
-import Entry from '../entry/Entry'
+import Entry from '../Entry/Entry'
 import serveQuery from '../../lib/serveQuery'
 
 interface Props {

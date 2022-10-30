@@ -1,4 +1,4 @@
-export * from './searchArea'
-export * from './header'
-export * from './footer'
+export * from './SearchArea'
+export * from './Header'
+export * from './Footer'
 
