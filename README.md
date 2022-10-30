@@ -1,4 +1,4 @@
-# Domain Name Checker (to-be renamed)
+# Domain Name Checker 
 
 Domain Name Checker is a full-stack application provides a list of every possible top-level domain that a user's input can be turned into, without adding or removing any characters. 
 
@@ -10,7 +10,7 @@ I came across [David Li's website](https://david.li/) and I was curious about ho
 
 ## Table of Contents
 
-- [Domain Name Checker (to-be renamed)](#domain-name-checker-to-be-renamed)
+- [Domain Name Checker](#domain-name-checker)
 - [Background](#background)
   - [Table of Contents](#table-of-contents)
   - [Install](#install)
