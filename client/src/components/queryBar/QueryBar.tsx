@@ -14,7 +14,7 @@ export const QueryBar: React.FC<Props> = ({ query, onChange }) => {
         return (
             <>
                 <TextInput 
-                    label='testing' 
+                    label='Generate Domain Names' 
                     id='query-bar-input'
                     size='xl'
                     type='search'

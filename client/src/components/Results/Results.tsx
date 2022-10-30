@@ -17,7 +17,6 @@ export const Results: React.FC<Props> = ({ query, tlds, settings }) => {
 	if (query === '' || query.length < 4) {
 		return (
 			<div className='results'>
-				p
 			</div>
 		)
 	}
